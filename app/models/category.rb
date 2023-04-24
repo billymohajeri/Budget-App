@@ -3,9 +3,9 @@ class Category < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :operations, through: :categorizations
 
-  validate :user_id, presence: true
-  validate :name, presence: true, uniqueness: { scope: :user_id }
-  validate :icon, presence: true
+  validates :user_id, presence: true
+  validates :name, presence: true, uniqueness: { scope: :user_id }
+  validates :icon, presence: true
 
   def slug
     name.parameterize

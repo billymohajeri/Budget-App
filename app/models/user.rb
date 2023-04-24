@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :categories
   has_many :operations
 
-  validate :name, :email, :password, presence: true
+  validates :name, :email, :password, presence: true
 end

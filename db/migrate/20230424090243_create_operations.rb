@@ -4,8 +4,8 @@ class CreateOperations < ActiveRecord::Migration[7.0]
       t.string :name
       t.decimal :amount, default: 0
       t.bigint :user_id, null: false
-      t.references :group, null: false, foregin_key: true
-      t.references :author, null: false, foregin_key: {to_table: 'usesrs', name: 'author_id'}
+      t.references :category, null: false, foreign_key: true
+      t.references :author, null: false, foreign_key: {to_table: 'users', name: 'author_id'}
       t.timestamps
     end
   end

@@ -18,3 +18,13 @@
   width: 90%;
   padding: 5%;
 }
+
+.op-div {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
+}

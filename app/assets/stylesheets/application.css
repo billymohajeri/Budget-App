@@ -28,3 +28,25 @@ body {
   font-weight: 300;
   color: #434b54;
 }
+
+.icon {
+  font-size: 3rem;
+}
+
+.text {
+  color: #434b54;
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.name {
+  margin-right: 35%;
+}
+
+.amount {
+  margin-right: 5%;
+  font-weight: bold;
+}

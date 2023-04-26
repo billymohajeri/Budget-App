@@ -57,8 +57,6 @@ body {
   border-bottom: 1px solid #c2c2c2;
   height: 65px;
   padding: 1%;
-  margin-top: 50px;
-  margin-bottom: 50px;
   font-size: 1.5rem;
 }
 
@@ -111,6 +109,15 @@ body {
 .drop-down {
   font-size: 2rem;
   border-radius: 5px;
-  width: 25%;
+  width: 95%;
   border: none;
+}
+
+.divider {
+  margin-bottom: 20px;
+}
+
+.alert {
+  text-align: center;
+  color: #757575;
 }

@@ -1,3 +1,4 @@
+<section class="section">
 <% @categories.each do |category| %>
   <%= link_to category_operations_path(category_id: category.id), class: "cat-div" do %>
     <div class="icon">
@@ -7,6 +8,7 @@
     <p class="text amount"><%= number_to_currency(@total_amount_by_category[category.name]) %></p>
   <% end %>
 <% end %>
+</section>
 <div class="sticky-btn-holder">
   <%= link_to "New Category", new_category_path, class:"sticky-btn" %>
 </div>

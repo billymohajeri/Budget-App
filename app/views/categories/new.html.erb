@@ -1,7 +1,9 @@
 <%= form_with(model: @category, local: true, html: { class: "" }) do |form| %>
+  <div class="divider"></div>
   <%= form.text_field :name, placeholder: "Name", class: "input" %>
+  <div class="divider"></div>
   <div class="">
-  <%= form.label :icon, class:"label" %><span>: </span>
+  <%= form.label :icon, class:"label" %><span>: </span><br>
     <%= form.collection_select :icon, emojis, :itself, :itself, {}, {class: 'drop-down'} %>
 
   </div>

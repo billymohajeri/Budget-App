@@ -1,13 +1,13 @@
 <% @operations = @operations.sort_by { |operation| operation.created_at }.reverse %>
 
-<div class="text-center text-white bg-sky-600 w-full leading-none">
-  <h1>Most recent</h1>
-  <p class="font-semibold">.</p>
+<div class="">
+  
 </div>
-<div class="flex justify-between w-full bg-white py-4 mb-2 font-semibold px-2">
+<div class="">
   <span>Total:</span>
   <span>$<%= @total_amount %></span>
 </div>
+<section class="section">
     <% @operations.each do |operation| %>
       <div class="op-div">
         <div class="icon">
@@ -20,7 +20,7 @@
         <p class="amount"><%= number_to_currency(operation.amount) %></p>
       </div>
     <% end %>
-
+</section>
 
 <div class="sticky-btn-holder">
   <%= link_to 'New Transaction', new_operation_path(category_id: @category&.id), class: "sticky-btn" %>

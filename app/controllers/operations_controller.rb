@@ -16,7 +16,7 @@ class OperationsController < ApplicationController
     @operation = current_user.operations.build
     @categories = current_user.categories
     @category = Category.find(params[:category_id]) if params[:category_id].present?
-    @page_name = 'Transactions'
+    @page_name = 'New Transaction'
   end
 
   def create

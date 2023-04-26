@@ -1,24 +1,3 @@
-.sticky-btn {
-  background-color: #5fb523;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  border: 1.5px white solid;
-  transition: background-color 0.3s ease-in-out;
-  padding: 2%;
-}
-
-.sticky-btn-holder {
-  background-color: #5fb523;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 90%;
-  padding: 5%;
-}
-
 .cat-div {
   background-color: white;
   display: flex;

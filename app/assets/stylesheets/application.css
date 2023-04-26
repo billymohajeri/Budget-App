@@ -50,3 +50,67 @@ body {
   margin-right: 5%;
   font-weight: bold;
 }
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+  height: 65px;
+  padding: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: #757575;
+  margin-left: 5px;
+}
+
+.sticky-btn {
+  background-color: #5fb523;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1.5px white solid;
+  transition: background-color 0.3s ease-in-out;
+  padding: 2%;
+}
+
+.sticky-btn-holder {
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 5%;
+}
+
+.none {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: unset;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.helper {
+  margin-bottom: 17px;
+  width: 88%;
+}
+
+.drop-down {
+  font-size: 2rem;
+  border-radius: 5px;
+  width: 25%;
+  border: none;
+}

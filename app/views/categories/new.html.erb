@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center w-full">
+
+<%= form_with(model: @category, local: true, html: { class: "w-full flex flex-col" }) do |form| %>
+  
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name", class: "mt-4 mb-2 block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field flex flex-col m-2">
+  <%= form.label :icon %>
+  <%= form.collection_select :icon, emojis, :itself, :itself %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="actions fixed bottom-0 w-full bg-lime-600 text-center hover:bg-lime-700 py-2 text-white">
+    <%= form.submit 'Save', class: 'text-white py-4 border-2 border-white', style: "padding-left: 43%; padding-right: 43%;" %>
+  </div>
+<% end %>
+
+</div>

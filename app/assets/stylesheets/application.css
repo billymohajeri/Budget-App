@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:300');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700');
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: #f0f2f1;
+}
+
+.light-text {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  color: #434b54;
+}

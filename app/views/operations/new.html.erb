@@ -1,0 +1,39 @@
+<div class="flex flex-col items-center w-full">
+
+<h1>New Operation</h1>
+
+<%= form_with(model: @operation, local: true, html: { class: "w-full flex flex-col" }) do |form| %>
+  <% if @operation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@operation.errors.count, "error") %> prohibited this operation from being saved:</h2>
+
+      <ul>
+        <% @operation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name", class: "mt-4 mb-2 block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field">
+          <%= form.text_field :amount, placeholder: "$0.00", type: "number", step: "any", class: "mt-4 mb-2 block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field flex flex-col gap-1 m-2">
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.where(user_id: current_user.id), :id, :name %>
+  </div>
+
+
+  <%= form.hidden_field :author_id, value: current_user.id %>
+
+  <div class="actions fixed bottom-0 w-full bg-lime-600 text-center hover:bg-lime-600 py-2 text-white">
+    <%= form.submit 'Save', class: 'text-white py-4 border-2 border-white', style: "padding-left: 43%; padding-right: 43%;" %>
+  </div>
+<% end %>
+
+</div>

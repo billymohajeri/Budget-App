@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!, :update_allowed_parameters, if: :devise_controller?
 
+  def index_page?
+    controller_name == 'pages' && action_name == 'index'
+  end
+
   protected
 
   def update_allowed_parameters

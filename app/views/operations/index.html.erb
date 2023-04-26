@@ -1,0 +1,27 @@
+<% @operations = @operations.sort_by { |operation| operation.created_at }.reverse %>
+
+<div class="text-center text-white bg-sky-600 w-full leading-none">
+  <h1>Most recent</h1>
+  <p class="font-semibold">.</p>
+</div>
+<div class="flex justify-between w-full bg-white py-4 mb-2 font-semibold px-2">
+  <span>Total:</span>
+  <span>$<%= @total_amount %></span>
+</div>
+    <% @operations.each do |operation| %>
+      <div class="grid grid-cols-3 w-full mb-2 py-3 overflow-x-hidden scrollbar-hide bg-white">
+        <div class="text-4xl flex m-2 justify-center items-center bg-yellow-100 h-16 w-16 text-center">
+          <%= @category.icon %>
+        </div>
+        <div class="flex flex-col justify-between">
+          <p><%= operation.name %></p>
+          <p class="text-xs"><%= operation.created_at.strftime('%B %d, %Y %H:%M') %></p>
+        </div>
+        <p class="flex justify-end font-semibold m-2"><%= number_to_currency(operation.amount) %></p>
+      </div>
+    <% end %>
+
+
+<div class="sticky-btn-holder">
+  <%= link_to 'New Transaction', new_operation_path(category_id: @category&.id), class: "sticky-btn" %>
+</div>

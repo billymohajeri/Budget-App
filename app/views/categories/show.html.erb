@@ -1,0 +1,24 @@
+<h1><%= @category.name %></h1>
+
+<% puts @operations.inspect %>
+<% if @operations.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @operations.each do |operation| %>
+        <tr>
+          <td><%= operation.name %></td>
+          <td><%= operation.amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= @total_amount %>
+<% else %>
+  <p>No operations found.</p>
+<% end %>

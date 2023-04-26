@@ -1,0 +1,27 @@
+<div class="flex flex-col w-full items-center">
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "w-full flex flex-col" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "full name", placeholder: "Full name", class: "mt-4 border-1 border-slate-50 block w-full bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+  
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "border-1 border-slate-50 block w-full bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "password", autocomplete: "current-password", placeholder: "Password", class: "block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "current-password", placeholder: "Repeat Password", class: "block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "" %>
+  </div>
+<% end %>
+</div>

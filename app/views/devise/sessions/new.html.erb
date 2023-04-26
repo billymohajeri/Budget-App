@@ -1,0 +1,26 @@
+<div class="flex flex-col items-center w-full">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "w-full flex flex-col" }) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "mt-4 border-1 border-slate-50 block w-full bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "block w-full border-1 border-slate-50 bg-white focus:ring focus:ring-gray-200 focus:ring-opacity-50" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "" %>
+  </div>
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+<% end %>
+
+</div>

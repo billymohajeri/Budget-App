@@ -6,6 +6,7 @@ class Operation < ApplicationRecord
   has_many :categories, through: :categorizations
 
   validates :name, :amount, presence: true
+  validates :amount, numericality: { decimal: true, allow_float: true }
 
   before_save :set_user_id
 

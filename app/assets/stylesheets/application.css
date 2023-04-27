@@ -121,3 +121,7 @@ body {
   text-align: center;
   color: #757575;
 }
+
+.not-visible{
+  display: none;
+}

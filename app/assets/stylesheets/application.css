@@ -92,7 +92,7 @@ body {
   border: none;
   color: inherit;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1.2rem;
   font-weight: inherit;
   margin: 0;
   padding: unset;
@@ -114,6 +114,10 @@ body {
 }
 
 .divider {
+  margin-bottom: 20px;
+}
+
+header {
   margin-bottom: 20px;
 }
 

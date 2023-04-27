@@ -20,7 +20,7 @@
       <%= yield %>
       <% flash.each do |key, value| %>
         <% if key == "notice" %>
-          <div class="alert" role="alert">
+          <div class="alert alert-success flex flex-col content-center items-center" role="alert">
             <%= value %>
           </div>
         <% end %>

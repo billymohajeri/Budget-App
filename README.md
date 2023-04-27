@@ -43,7 +43,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Not deployed yet...]()
+- [See the porject live on Render.com](https://budgetapp-azzb.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

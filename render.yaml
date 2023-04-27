@@ -1,6 +1,6 @@
 databases:
-  - name: beget_db
-    databaseName: beget_db
+  - name: budget_db
+    databaseName: budget_db
     user: billy
 
 services:
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: beget_db
+          name: budget_db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

@@ -43,13 +43,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [See the porject live on Render.com](https://budgetapp-azzb.onrender.com/)
+[See the project live on Render.com](https://budgetapp-azzb.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="video-link"></a>
 
-[No presentation yet...]()
+[See the project presentation here](https://drive.google.com/file/d/1yFFT7da9Rl3RTPyH7NXeJOHWVwxRPiah/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,3 +1,9 @@
+<nav class="nav-flex">
+  <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+  <div class="flex items-center">CATEGORIES</div>
+  <%= image_tag "search.png", width: 30, class:"invert" %>
+</nav>
+
 <section class="section">
 <% @categories.each do |category| %>
   <%= link_to category_operations_path(category_id: category.id), class: "cat-div" do %>

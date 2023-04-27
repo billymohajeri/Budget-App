@@ -1,9 +1,13 @@
-<div class="">
+<nav class="nav-flex">
+  <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+  <div class="flex items-center">NEW TRANSACTION</div>
+  <%= image_tag "search.png", width: 30, class:"invert" %>
+</nav>
+
 <%= form_with(model: @operation, local: true, html: { class: "" }) do |form| %>
   <% if @operation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@operation.errors.count, "error") %> prohibited this operation from being saved:</h2>
-
       <ul>
         <% @operation.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -15,26 +19,19 @@
   <div class="">
     <%= form.text_field :name, placeholder: "Name", class: "input" %>
   </div>
-
   <div class="divider"></div>
   <div class="field">
   <%= form.text_field :amount, placeholder: "$0.00", type: "number", step: "any", class: "input" %>
   </div>
-  
   <div class="divider"></div>
   <div class="">
     <%= form.label :category_id, class:"label" %><span>: </span>
     <%= form.collection_select :category_id, Category.where(user_id: current_user.id), :id, :name, {selected: @category.id}, {class: 'drop-down'} %>
   </div>
-
-
   <%= form.hidden_field :author_id, value: current_user.id %>
-
   <div class="sticky-btn-holder helper">
     <div class="sticky-btn">
       <%= form.submit 'Save', class: "none" %>
     </div>
   </div>
 <% end %>
-
-</div>

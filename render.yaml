@@ -1,7 +1,7 @@
 databases:
-  - name: recipe_app_iieu
-    databaseName: recipe_app_iieu
-    user: recipe_app_iieu_user
+  - name: beget_db
+    databaseName: beget_db
+    user: billy
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: recipe_app_iieu
+          name: beget_db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

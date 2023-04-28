@@ -1,0 +1,13 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "" }) do |f| %>
+  <header>
+    <nav class="nav-flex">
+      <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+      <div class="flex items-center">REGISTER</div>
+      <%= f.submit "Next", class: 'none'  %>
+    </nav>
+  </header>
+  <%= f.text_field :name, autofocus: true, autocomplete: "full name", placeholder: "Full name", class: "input" %>
+  <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "input" %>
+  <%= f.password_field :password, autocomplete: "password", autocomplete: "current-password", placeholder: "Password", class: "input" %>
+  <%= f.password_field :password_confirmation, autocomplete: "current-password", placeholder: "Repeat Password", class: "input" %>
+<% end %>

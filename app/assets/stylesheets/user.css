@@ -1,0 +1,67 @@
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.blue-bg {
+  background-color: #3778c2;
+}
+
+.splash-title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.splash-pic {
+  width: 300px;
+  margin-bottom: 200px;
+}
+
+.splash-btns {
+  padding: 20px;
+  width: 95%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.splash-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.white-text {
+  color: white;
+}
+
+.gary-text {
+  color: #434b54;
+}
+
+.none {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: unset;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}

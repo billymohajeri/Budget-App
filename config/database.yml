@@ -14,6 +14,7 @@
 # Configure Using Gemfile
 # gem "pg"
 #
+
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -23,13 +24,15 @@ default: &default
 
 development:
   <<: *default
-  database: BudgetApp_development
-
+  database: BudgetApp_development13
+  username: <%= ENV["BUDGETAPP_DATABASE_USERNAME"] %>
+  password: <%= ENV["BUDGETAPP_DATABASE_PASSWORD"] %>
+  host: localhost
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: BudgetApp
+  #username: Project
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: BudgetApp_test
+  username: <%= ENV["BUDGETAPP_DATABASE_USERNAME"] %>
+  password: <%= ENV["BUDGETAPP_DATABASE_PASSWORD"] %>
+  host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: BudgetApp_production
-  username: BudgetApp
-  password: <%= ENV["BUDGETAPP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

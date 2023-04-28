@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "" }) do |f| %>
+  <header>
+    <nav class="nav-flex">
+      <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+      <div class="flex items-center">LOGIN</div>
+      <%= f.submit "Log in", class: 'none'  %>
+    </nav>
+  </header>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
+  <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
+  <% if devise_mapping.rememberable? %>
+  <% end %>
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+<div class="center">
+<%= link_to "Forgot password ?", new_password_path(resource_name) %><br />
+</div>
+<% end %>

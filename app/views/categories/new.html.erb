@@ -1,0 +1,22 @@
+<nav class="nav-flex">
+  <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+  <div class="flex items-center">NEW CATEGORY</div>
+  <%= image_tag "search.png", width: 30, class:"invert" %>
+</nav>
+
+
+<%= form_with(model: @category, local: true, html: { class: "" }) do |form| %>
+  <div class="divider"></div>
+  <%= form.text_field :name, placeholder: "Name", class: "input" %>
+  <div class="divider"></div>
+  <%= form.label :icon, class:"label" %><span>: </span><br>
+  <%= form.collection_select :icon, emojis, :itself, :itself, {}, {class: 'drop-down'} %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="sticky-btn-holder helper">
+    <div class="sticky-btn">
+      <%= form.submit 'Save', class: "none" %>
+    </div>
+  </div>
+<% end %>
+

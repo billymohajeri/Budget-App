@@ -1,0 +1,18 @@
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 10px;
+  color: white;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.5rem;
+}
+
+.invert {
+  -webkit-filter: invert(100%);
+}
+
+.margin {
+  margin-top: 20px;
+}

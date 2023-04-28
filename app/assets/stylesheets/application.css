@@ -13,3 +13,125 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:300');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700');
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: #f0f2f1;
+}
+
+.light-text {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  color: #434b54;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.text {
+  color: #434b54;
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.name {
+  margin-right: 35%;
+}
+
+.amount {
+  margin-right: 5%;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+  height: 65px;
+  padding: 1%;
+  font-size: 1.5rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: #757575;
+  margin-left: 5px;
+}
+
+.sticky-btn {
+  background-color: #5fb523;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1.5px white solid;
+  transition: background-color 0.3s ease-in-out;
+  padding: 2%;
+}
+
+.sticky-btn-holder {
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 5%;
+}
+
+.none {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: inherit;
+  margin: 0;
+  padding: unset;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.helper {
+  margin-bottom: 17px;
+  width: 88%;
+}
+
+.drop-down {
+  font-size: 2rem;
+  border-radius: 5px;
+  width: 95%;
+  border: none;
+}
+
+.divider {
+  margin-bottom: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.alert {
+  text-align: center;
+  color: #757575;
+}
+
+.not-visible {
+  display: none;
+}
+
+.center {
+  margin-top: 20px;
+  text-align: center;
+  color: #a4a4a4;
+}

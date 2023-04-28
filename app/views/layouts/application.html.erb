@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgetApp</title>
+    <title>Billy Budget</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= favicon_link_tag asset_path('icon.png') %>
   </head>
 
   <body>
-    <%= yield %>
+    <main class="flex flex-col items-center w-full bg-stone-50 h-screen">
+    <% unless index_page? %>
+    <%= render 'shared/navbar' %>
+  <% end %>
+      <%= yield %>
+      <% flash.each do |key, value| %>
+        <% if key == "notice" %>
+          <div class="alert alert-success flex flex-col content-center items-center" role="alert">
+            <%= value %>
+          </div>
+        <% end %>
+      <% end %>
+    </main>
   </body>
 </html>

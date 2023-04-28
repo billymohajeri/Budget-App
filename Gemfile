@@ -29,6 +29,10 @@ gem 'jbuilder'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'dotenv', '~> 2.1', '>= 2.1.1'
+
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -69,6 +73,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end

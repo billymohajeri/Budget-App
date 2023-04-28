@@ -1,0 +1,30 @@
+<nav class="nav-flex">
+  <%= link_to image_tag("back.png", width: 30), "/" , class:"invert margin" %>
+  <div class="flex items-center">TRANSACTIONS</div>
+  <%= image_tag "search.png", width: 30, class:"invert" %>
+</nav>
+
+<% @operations = @operations.sort_by { |operation| operation.created_at }.reverse %>
+
+<div class="text center">
+  <span>Total:</span>
+  <span>$<%= @total_amount %></span>
+</div>
+<section class="section">
+    <% @operations.each do |operation| %>
+      <div class="op-div">
+        <div class="icon">
+          <%= @category.icon %>
+        </div>
+        <div>
+          <p class="name text"><%= operation.name %></p>
+          <p class="date"><%= operation.created_at.strftime('%B %d, %Y %H:%M') %></p>
+        </div>
+        <p class="amount"><%= number_to_currency(operation.amount) %></p>
+      </div>
+    <% end %>
+</section>
+
+<div class="sticky-btn-holder">
+  <%= link_to 'New Transaction', new_operation_path(category_id: @category&.id), class: "sticky-btn" %>
+</div>

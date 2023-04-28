@@ -49,7 +49,7 @@
 
 ## 📺 Presentation <a name="video-link"></a>
 
-[See the project presentation here](https://drive.google.com/file/d/1yFFT7da9Rl3RTPyH7NXeJOHWVwxRPiah/view?usp=sharing)
+[See the project presentation here](https://drive.google.com/file/d/1-NxysqGZq_3k30RmvdPABsNiRtL6Jw3p/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

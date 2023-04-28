@@ -24,7 +24,7 @@ default: &default
 
 development:
   <<: *default
-  database: BudgetApp_development14
+  database: BudgetApp_development13
   username: <%= ENV["BUDGETAPP_DATABASE_USERNAME"] %>
   password: <%= ENV["BUDGETAPP_DATABASE_PASSWORD"] %>
   host: localhost

@@ -96,7 +96,7 @@ rails s
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a name="authors"></a>
+## 👥 Author <a name="author"></a>
 
 👤 **Billy Mohajeri**
 
